@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const CtCard = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     width: 220px;
-    height: 300px;
+    height: 305px;
     border-radius: 20px;
     background-color: var(--secondary-color);
     position: relative;
@@ -22,6 +22,7 @@ export const CtImgCard = styled.div`
     border-radius: 85px;
     box-shadow: 0px 0px 89px 8px rgba(207, 108, 102, 0.64);
     overflow: hidden;
+    margin-top: 20px;
 `;
 
 export const ImgCard = styled.img`
@@ -31,11 +32,13 @@ export const ImgCard = styled.img`
 `;
 
 export const TxtCard = styled.h4`
-    font-family: 'The Nautigal', cursive;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: var(--light-color);
     margin: 15px;
     font-weight: 400;
+    height: 50px;
+    display: flex;
+    align-items: center;
 `;
 
 export const MoreButton = styled.button`

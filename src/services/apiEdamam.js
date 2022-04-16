@@ -2,13 +2,13 @@ import axios from "axios";
 
 export const apiEdamam = () => {
 
-    /* let url = "https://api.edamam.com/search?q=dessert&pear&app_id=cc383839&app_key=5a1cea729b493172ae24a7a51f2a7d9e&from=0&to=10"; */
-
     let url = "https://api.edamam.com/search?q=dessert";
-    let auth = "&app_id=cc383839&app_key=5a1cea729b493172ae24a7a51f2a7d9e&from=0&to=10"
+    let auth = "&app_id=cc383839&app_key=5a1cea729b493172ae24a7a51f2a7d9e&";
+    let startPage = "from=";
+    let endPage = "&to=";
 
-    const getDesserts = async () => {
-        const res = await axios.get(`${url}${auth}`);
+    const nextPage = async (start, end) => {
+        const res = await axios.get(`${url}${auth}${startPage}${start}${endPage}${end}`);
         return res;
     };
 
@@ -17,13 +17,11 @@ export const apiEdamam = () => {
         return res;
     };
 
-
-
-
-  return (
-      getDesserts,
-      getSearch
-  )
+    return {
+        nextPage,
+        getSearch
+    }
+        
 }
 
 
