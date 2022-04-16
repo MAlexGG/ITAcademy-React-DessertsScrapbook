@@ -28,3 +28,29 @@ export const BtMore = styled.button`
         color: var(--secondary-color);
     }
 `;
+
+export const CtSearch = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+`;
+
+export const InputSearch = styled.input`
+    width: 215px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+
+`;
+
+export const BtSearch = styled.button`
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+`;
+
+export const ImgSearch = styled.img`
+    height: 30px;
+    filter: invert(6%) sepia(46%) saturate(3560%) hue-rotate(1deg) brightness(97%) contrast(109%);
+`;
