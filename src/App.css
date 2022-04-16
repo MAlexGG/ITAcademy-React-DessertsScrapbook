@@ -55,3 +55,7 @@ input:focus {
     border-color: var(--secondary-color);
     box-shadow: 0 0 10px var(--secondary-color);
 }
+
+body {
+    background-color: var(--main-color);
+}

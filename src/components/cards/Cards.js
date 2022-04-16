@@ -6,7 +6,12 @@ export default function Cards() {
   return (
       <>
           <CtCards>
-            <Card/>
+        <Card />
+        <Card/>
+        <Card />
+        <Card />
+        <Card/>
+        <Card/>
           </CtCards>
           
       </>
