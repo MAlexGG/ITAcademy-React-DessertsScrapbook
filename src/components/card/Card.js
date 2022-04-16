@@ -1,16 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { CtCard, CtImgCard, ImgCard, MoreButton, TxtCard } from './Card.styled';
-import prueba from '../../assets/img/prueba.jpg';
 
-export default function Card({dessert}) {
+export default function Card({dessert, index}) {
   return (
       <>
           <CtCard>
               <CtImgCard>
-                  <ImgCard src={prueba} alt='dessert picture'/>
+                  <ImgCard src={dessert.recipe.image} alt='dessert picture' />
               </CtImgCard>
               <TxtCard>{dessert.recipe.label}</TxtCard>
-              <MoreButton>+</MoreButton>
+              <Link to={`/dessert/${index}`} state={{ dessert: dessert }} key={index}><MoreButton>+</MoreButton></Link>
           </CtCard>
       </>
   )

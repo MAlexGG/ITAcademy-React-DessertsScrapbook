@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { apiEdamam } from '../../services/apiEdamam'
 import Card from '../card/Card'
-import { CtCards } from './Cards.styled'
+import { BtMore, CtCards } from './Cards.styled'
 
 export default function Cards() {
 
@@ -30,14 +30,12 @@ export default function Cards() {
         {
           list.map((item) => (
             item.map((dessert, index) => (
-            <Card key={index} dessert={dessert}/>
+              <Card key={index} dessert={dessert} index={index}/>
             ))
           )) 
         }
-        <button onClick={viewMore}>More...</button>
-          
+        <BtMore onClick={viewMore}>More...</BtMore>
         </CtCards>
-          
       </>
   )
 }

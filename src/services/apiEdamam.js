@@ -12,8 +12,8 @@ export const apiEdamam = () => {
         return res;
     };
 
-    const getSearch = async (search) => {
-        const res = await axios.get(`${url}&${search}${auth}`);
+    const getSearch = async (search, start, end) => {
+        const res = await axios.get(`${url}&${search}${auth}${startPage}${start}${endPage}${end}`);
         return res;
     };
 

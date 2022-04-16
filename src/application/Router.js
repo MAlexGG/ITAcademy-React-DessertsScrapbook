@@ -10,7 +10,7 @@ export default function Router() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App />} />
-                <Route path="/dessert" element={<Dessert/>} />
+                <Route path="/dessert/:index" element={<Dessert/>}/>
             </Routes>
         </BrowserRouter>
     )
