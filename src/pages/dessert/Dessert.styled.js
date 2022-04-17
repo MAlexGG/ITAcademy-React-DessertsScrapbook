@@ -17,6 +17,19 @@ export const TxtDessertTitle = styled.h2`
     text-align: center;
     margin-top: 80px;
     margin-bottom: 15px;
+    @media (min-width: 815px) {
+        font-size: 4.5rem; 
+    }
+`;
+
+export const CtInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 815px) {
+        flex-direction: row;
+    }
 `;
 
 export const CtImgDessert = styled.div`
@@ -29,6 +42,11 @@ export const CtImgDessert = styled.div`
     box-shadow: 0px 0px 89px 8px rgba(207, 108, 102, 0.64);
     overflow: hidden;
     margin-top: 20px;
+    @media (min-width: 574px) {
+        width: 370px;
+        height: 370px;
+        border-radius: 185px; 
+    }
 `;
 
 export const ImgDessert = styled.img`
@@ -41,6 +59,9 @@ export const CtText = styled.div`
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    @media (min-width: 815px) {
+        margin-left: 50px;
+    }
 `;
 
 export const TxtIngredients = styled.ul`
@@ -62,6 +83,7 @@ export const BtStart = styled.button`
     font-size: 1.2rem;
     margin-top: 10px;
     margin-bottom: 45px;
+    margin-left: 20px;
     cursor: pointer;
     &:hover{
         background-color: var(--main-color);
