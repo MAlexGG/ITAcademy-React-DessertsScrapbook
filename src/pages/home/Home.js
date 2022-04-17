@@ -4,6 +4,7 @@ import Navbar from '../../components/navbar/Navbar';
 import Cards from '../../components/cards/Cards';
 
 export default function Home() {
+
   return (
     <>
       <CtHome>

@@ -3,6 +3,7 @@ import { apiEdamam } from '../../services/apiEdamam';
 import Card from '../card/Card';
 import { BtMore, CtCards, CtSearch, InputSearch, BtSearch, ImgSearch } from './Cards.styled';
 import lupa from '../../assets/img/search.svg';
+import Loader from '../loader/Loader';
 
 export default function Cards() {
 
@@ -10,13 +11,16 @@ export default function Cards() {
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(10);
   const [search, setSearch] = useState('');
+  const [loader, setLoader] = useState(false);
 
   const api = apiEdamam();
   
   useEffect(() => {
+    setLoader(true);
     api.nextPage(start, end).then((res) => {
       console.log(res.data.hits);
       setList([...list, res.data.hits]);
+      setLoader(false);
     }).catch((error) => error)
   }, [start, end]);
 
@@ -42,6 +46,7 @@ export default function Cards() {
 
   return (
     <>
+      {loader && <Loader/>}
       <CtSearch>
         <InputSearch type='text' placeholder='search...' name='search' onChange={handleChange}/>
         <BtSearch onClick={handleSubmit}>
