@@ -40,7 +40,7 @@ export const CtDropdownMenu = styled.div`
     justify-content: center;
     align-items: center;
     width: 210px;
-    height: 130px;
+    height: 165px;
     background-color: var(--aux-color);
     border-radius: 20px;
     margin-top: 10px;
@@ -60,6 +60,7 @@ export const BtDropdownMenu = styled.button`
 export const CtInlineMenu= styled.div`
     display: none;
     cursor: pointer;
+    color: ${(props) => props.color};
     @media (min-width: 815px) {
         display: flex;
         align-items: center;
@@ -67,7 +68,7 @@ export const CtInlineMenu= styled.div`
 `;
 
 export const BtInlineMenu = styled.button`
-    color: var(--secondary-color);
+    color: ${(props) => props.color};
     font-size: 1.2rem;
     margin: 8px;
     cursor: pointer;
@@ -76,13 +77,15 @@ export const BtInlineMenu = styled.button`
     font-family: 'Akshar', sans-serif;
 `;
 
+
+
 export const Logo = styled.img`
     display: none;
     @media (min-width: 815px) {
         display: flex;
         width: 50px;
         margin: 10px;
-        filter: invert(6%) sepia(95%) saturate(1555%) hue-rotate(352deg) brightness(92%) contrast(111%);  
+        filter: ${(props) => props.filter};
     }
 `;
 

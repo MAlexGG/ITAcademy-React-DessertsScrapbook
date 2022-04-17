@@ -15,7 +15,8 @@
     font-weight: 400;
 }
 
-.App-logo {
+
+/* .App-logo {
     height: 40vmin;
     pointer-events: none;
 }
@@ -48,14 +49,10 @@
     to {
         transform: rotate(360deg);
     }
-}
+} */
 
 input:focus {
     outline: none !important;
     border-color: var(--secondary-color);
     box-shadow: 0 0 10px var(--secondary-color);
-}
-
-body {
-    background-color: var(--main-color);
 }

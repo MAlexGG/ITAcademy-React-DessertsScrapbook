@@ -24,7 +24,7 @@ export default function Cards() {
     setStart(start + 10);
     setEnd(end + 10)
   };
-
+  
   const handleChange = (e) => {
     e.persist();
     setSearch({
