@@ -24,14 +24,14 @@ export default function Navbar(props) {
             <ImgNavbar src={chef} alt='menu bar'/>
           </BtNavbar>
           <CtDropdownMenu isVisible={isVisible}>
-            <BtDropdownMenu>Log in</BtDropdownMenu>
-            <BtDropdownMenu>Sign up</BtDropdownMenu>
+            <Link to='/login'><BtDropdownMenu>Log in</BtDropdownMenu></Link>
+            <Link to='/signup'><BtDropdownMenu>Sign up</BtDropdownMenu></Link>
             <Link to='/'><BtDropdownMenu>Home</BtDropdownMenu></Link>
           </CtDropdownMenu>
           <CtInlineMenu color={props.color}>
-            <BtInlineMenu color={props.color}>Log in</BtInlineMenu>
+            <Link to='/login'><BtInlineMenu color={props.color}>Log in</BtInlineMenu></Link>
             <div> | </div>
-            <BtInlineMenu color={props.color}>Sign up</BtInlineMenu>
+            <Link to='/signup'><BtInlineMenu color={props.color}>Sign up</BtInlineMenu></Link>
           </CtInlineMenu>  
         </CtMenu>
       </CtNavbar>
