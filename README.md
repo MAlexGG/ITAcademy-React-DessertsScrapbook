@@ -15,6 +15,8 @@ This is a website that let you search for sweet food recipes, it's developed wit
 ![Desktop - 1](https://user-images.githubusercontent.com/73828751/163795770-bb3f2b0b-0088-4a80-876f-60d8e2b7f29c.jpg)
 
 
+![DesktopDesserts](https://user-images.githubusercontent.com/73828751/163796283-832ca5ee-9f3a-4aaf-9246-f017a60dab93.jpg)
+
 ## Technologies
 It was developed with react.js, the UI was design in Figma, and photos edited with Adobe Photoshop, the icons was made in Adobe Illustrator. 
 
