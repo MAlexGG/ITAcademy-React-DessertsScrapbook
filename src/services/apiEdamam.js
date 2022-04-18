@@ -14,10 +14,5 @@ export const apiEdamam = () => {
 
     return {
         getSearch
-    }
-        
+    }       
 }
-
-
-/* https://developer.edamam.com/admin/applications/1409622511458?service_id=2555417725632 */
-/* https://developer.edamam.com/es/api-recetas-edamam-documentacion */
