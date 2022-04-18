@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { apiEdamam } from '../../services/apiEdamam';
 import Card from '../card/Card';
 import { BtMore, CtCards, CtSearch, InputSearch, BtSearch, ImgSearch } from './Cards.styled';
@@ -10,22 +10,27 @@ export default function Cards() {
   const [list, setList] = useState([]);
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(10);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState({
+    search: ''
+  });
   const [loader, setLoader] = useState(false);
 
   const api = apiEdamam();
-  
+  let searchWord = useRef('');
+
   useEffect(() => {
     setLoader(true);
-    api.nextPage(start, end).then((res) => {
+    api.getSearch(searchWord.current, start, end).then((res) => {
       setList([...list, res.data.hits]);
       setLoader(false);
     }).catch((error) => error)
-  }, [start, end]);
+  }, [start, end, searchWord]);
+  
 
   const viewMore = () => {
     setStart(start + 10);
-    setEnd(end + 10)
+    setEnd(end + 10);
+    searchWord.current = search.search;
   };
   
   const handleChange = (e) => {
@@ -39,8 +44,9 @@ export default function Cards() {
   const handleSubmit = () => {
     api.getSearch(search.search, start, end).then((res) => {
       setList([res.data.hits]);
+      searchWord.current = search.search;
     }).catch((error) => error);
-  };
+  }; 
 
   return (
     <>

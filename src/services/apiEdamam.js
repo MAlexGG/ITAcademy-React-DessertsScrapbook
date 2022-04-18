@@ -7,18 +7,12 @@ export const apiEdamam = () => {
     let startPage = "from=";
     let endPage = "&to=";
 
-    const nextPage = async (start, end) => {
-        const res = await axios.get(`${url}${auth}${startPage}${start}${endPage}${end}`);
-        return res;
-    };
-
     const getSearch = async (search, start, end) => {
         const res = await axios.get(`${url} ${search}${auth}${startPage}${start}${endPage}${end}`);
         return res;
     };
 
     return {
-        nextPage,
         getSearch
     }
         
@@ -26,5 +20,4 @@ export const apiEdamam = () => {
 
 
 /* https://developer.edamam.com/admin/applications/1409622511458?service_id=2555417725632 */
-
 /* https://developer.edamam.com/es/api-recetas-edamam-documentacion */
