@@ -18,7 +18,6 @@ export default function Cards() {
   useEffect(() => {
     setLoader(true);
     api.nextPage(start, end).then((res) => {
-      console.log(res.data.hits);
       setList([...list, res.data.hits]);
       setLoader(false);
     }).catch((error) => error)
@@ -39,7 +38,6 @@ export default function Cards() {
 
   const handleSubmit = () => {
     api.getSearch(search.search, start, end).then((res) => {
-      console.log(res.data.hits);
       setList([res.data.hits]);
     }).catch((error) => error);
   };

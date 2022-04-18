@@ -5,11 +5,13 @@ export const CtLoader = styled.div`
     justify-content: center;
     align-items: center;
     background-color: var(--secondary-color);
+    opacity: 0.7;
+    border-radius: 20px;
     z-index: 1;
-    width: 100vw;
-    height: 100vh;
+    width: 500px;
+    height: 250px;
     position: absolute;
-    top: 0%;
+    top: 65%;
 `;
 
 export const LoadingText = styled.p`
