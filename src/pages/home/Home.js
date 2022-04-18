@@ -10,7 +10,7 @@ export default function Home() {
       <CtHome>
         <Navbar color='#2A0200' filter='invert(3%) sepia(68%) saturate(4790%) hue-rotate(6deg) brightness(98%) contrast(105%);'/>
         <Title>My Dessert Scrapbook</Title>
-        <TxtHome>This is a personal collection of recepies I had found online</TxtHome>
+        <TxtHome>This is a personal collection of recipes I had found online</TxtHome>
         <Cards />
         <ATop href="#root">Up</ATop>
       </CtHome>
