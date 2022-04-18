@@ -14,7 +14,8 @@ This is a website that let you search for sweet food recipes, it's developed wit
 ### UI Design
 ![DesktopDesserts](https://user-images.githubusercontent.com/73828751/163796429-c1c259d0-a20b-475c-b7a5-d09e8184c2bf.jpg)
 ![Mobile desserts](https://user-images.githubusercontent.com/73828751/163796583-74a75ad6-0389-4239-8f42-b1eefe137962.jpg)
-
+![DesktopDessert](https://user-images.githubusercontent.com/73828751/163796704-07d8cc23-7b5f-44d4-b7e2-0ea24dea65e6.jpg)
+![Mobile dessert](https://user-images.githubusercontent.com/73828751/163796709-81b519f5-12ec-463b-9660-7d8e23ca4e4c.jpg)
 
 
 ## Technologies
