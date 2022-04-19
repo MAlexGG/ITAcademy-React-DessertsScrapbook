@@ -8,7 +8,6 @@ export default function Dessert() {
   const location = useLocation();
   const { dessert } = location.state;
 
-  console.log(dessert);
   return (
     <>
       <CtDessert>
